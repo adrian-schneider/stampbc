@@ -307,6 +307,7 @@ as a normal user
 
   make clean
   make
+  make test
 
 as superuser
 
