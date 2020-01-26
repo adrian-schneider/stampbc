@@ -11,9 +11,9 @@
 #include <string>
 
 struct SBStampID {
-  char* send;
-  char* recv;
-  char* id;
+  char const * send;
+  char const * recv;
+  char const * id;
   int   memSlots;
 };
 

@@ -77,8 +77,8 @@ int processOptions(int argc, char** argv, SBProject& proj)
       break;
 
     case 'C':
-      f = proj.getFlags() | SBProject::F_COMPILEONLY &
-        ~SBProject::F_IGNPROJECT;
+      f = proj.getFlags() | (SBProject::F_COMPILEONLY &
+        ~SBProject::F_IGNPROJECT);
       proj.setFlags(f);
       break;
 

@@ -79,7 +79,7 @@ bool SBTokenizer::init()
     return true;
   }
   else {
-    CERR << EYEERR << " " << strerror(errno) << " opening " <<
+    CERR << EYEERR << " " << dlerror() << " opening " <<
       TOKENIZER_SO << ENDL;
     return false;
   }

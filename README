@@ -3,7 +3,7 @@ stampbc - STAMP Basic Compiler
 
 tokenizer.so provided by Parallax Inc., Rocklin, CA USA (www.parallax.com).
 stampbc developped and provided by Adrian Schneider, Basel, Switzerland
-(adrian.schneider@tiscalinet.ch)
+(adrian-schneider4@bluewin.ch)
 
 version 2.1
 -----------
@@ -109,6 +109,17 @@ just blanks. This has been fixed.
 
 added a percentage bar to viusalize the memory occupancy beyond a purely
 numerical display.
+
+
+32 bit support on 64 bit Linux
+------------------------------
+
+The tokenizer library delivered is 32 bit. To build stampbc on 64 bit
+Linux you may have to install full 32 bit support for the GNU C++
+compiler using:
+
+sudo apt-get install g++-multilib
+
 
 stampbc
 -------

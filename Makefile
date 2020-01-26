@@ -3,7 +3,7 @@
 EXEC   = stampbc 
 OBJS   = stampbc.o SBTokenizer.o SBCompiler.o SBProject.o SBLoader.o
 LIBS   = -ldl
-CFLAGS = -Wall -D_COLORFUL
+CFLAGS = -m32 -Wall -D_COLORFUL
 #CFLAGS = -g -Wall -D_COLORFUL
 CC     = g++ $(CFLAGS)
 

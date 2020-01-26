@@ -11,29 +11,16 @@
 // ASC20040203 version 2.1
 //******************************************************************************
 
-// some tricks from parallax's tokenizer.h: type size checking
-#if USHRT_MAX != 0xffff
-  #error 'word' MUST be 16 bits!
-#endif
-
-#if UCHAR_MAX != 0xff
-  #error 'byte', 'char' and 'bool' MUST be 8 bits!
-#endif
-
-#if INT_MAX != 0x7fffffff
-  #if INT_MAX != 0xffffffff
-    #error 'int' MUST be 32 bits!
-  #endif
-#endif
+#include <stdint.h>
 
 #undef byte
-typedef unsigned char byte;
+typedef uint8_t byte;
 
 #undef bool
 #define bool byte
 
 #undef word
-typedef unsigned short int word;
+typedef uint16_t word;
 
 #define STAMPBC_VERSION		"stampbc v2.1(2005)"
 
