@@ -24,6 +24,7 @@ $(EXEC): $(OBJS)
 clean:
 	rm -f *.o
 	rm -f $(EXEC)
+	rm -f test_hexdump
 
 install:
 # copy lib and executable
@@ -47,5 +48,9 @@ tar:
 	test*.bs? \
 	README \
 	showtty \
+	run_test \
+	test_good_hexdump \
 	Makefile
 
+test:
+	./run_test

@@ -22,7 +22,7 @@ typedef uint8_t byte;
 #undef word
 typedef uint16_t word;
 
-#define STAMPBC_VERSION		"stampbc v2.1(2005)"
+#define STAMPBC_VERSION		"stampbc v2.1.6(2020)"
 
 #define COMM_DEVICE		"/dev/ttyS"
 #define COMM_DEVICE_DEFAULT	"/dev/ttyS0"

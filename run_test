@@ -1,0 +1,22 @@
+#/bin/bash
+dut=test.o
+if [ -e "$dut" ]
+then
+  rm "$dut"
+fi
+LD_LIBRARY_PATH=./ ./stampbc -V
+LD_LIBRARY_PATH=./ ./stampbc -v -c test.bs2
+if [ -e "$dut" ]
+then
+  hexdump "$dut" > test_hexdump
+  diff test_good_hexdump test_hexdump
+  if [ $? -eq 0 ]
+  then
+    echo "*** Compilation result looks good."
+  else
+    echo "*** Compilation failed."
+  fi
+else
+  echo "*** Test did not compile."
+fi
+

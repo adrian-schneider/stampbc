@@ -225,6 +225,12 @@ void SBProject::versionInfo()
 
   CERR << STAMPBC_VERSION << ", ";
   cmp->printVersionInfo();
+  if (cmp->testRecAlignment()) {
+    CERR << "Record alignment tests good." << ENDL;
+  }
+  else {
+    CERR << "Rec Alignment test failed." << ENDL;
+  }
 }
 
 //------------------------------------------------------------------------------
